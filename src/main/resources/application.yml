@@ -1,0 +1,12 @@
+server.port: 8085
+spring.application.name: bug-wars-ai-parser
+
+---
+spring.profiles: local, default
+eureka:
+  password: password
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://user:${eureka.password}@${eureka.instance.hostname}:8761/eureka/
